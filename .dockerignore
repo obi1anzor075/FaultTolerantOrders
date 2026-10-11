@@ -1,0 +1,4 @@
+.git
+.dotnet-home
+**/bin
+**/obj

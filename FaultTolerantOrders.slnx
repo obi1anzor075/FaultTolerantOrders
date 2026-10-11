@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Contracts/Contracts.csproj" />
+    <Project Path="src/NotificationService.Worker/NotificationService.Worker.csproj" />
+    <Project Path="src/OrderService.Api/OrderService.Api.csproj" />
+  </Folder>
+</Solution>
