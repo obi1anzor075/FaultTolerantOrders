@@ -1,0 +1,5 @@
+# Use only to freeze publishing before the controlled post-commit crash experiment.
+services:
+  order-api:
+    environment:
+      Outbox__Enabled: "false"

@@ -6,6 +6,7 @@ public sealed class OrderDbContext(DbContextOptions<OrderDbContext> options) : D
 {
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<OrderItem> OrderItems => Set<OrderItem>();
+    public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -22,6 +23,19 @@ public sealed class OrderDbContext(DbContextOptions<OrderDbContext> options) : D
             entity.ToTable("OrderItems");
             entity.HasKey(item => item.Id);
             entity.Property(item => item.UnitPrice).HasPrecision(18, 2);
+        });
+
+        modelBuilder.Entity<OutboxMessage>(entity =>
+        {
+            entity.ToTable("OutboxMessages");
+            entity.HasKey(message => message.Id);
+            entity.Property(message => message.Type).HasMaxLength(256);
+            entity.Property(message => message.Payload).HasColumnType("jsonb");
+            entity.Property(message => message.Error).HasMaxLength(2000);
+            entity.HasOne<Order>().WithMany().HasForeignKey(message => message.OrderId);
+            entity.HasIndex(message => new { message.OrderId, message.Type }).IsUnique();
+            entity.HasIndex(message => new { message.NextRetryAt, message.OccurredAt })
+                .HasFilter("\"PublishedAt\" IS NULL");
         });
     }
 }

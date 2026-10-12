@@ -4,7 +4,7 @@ using RabbitMQ.Client;
 
 namespace OrderService.Api;
 
-public sealed class RabbitPublisher(IConfiguration configuration) : IAsyncDisposable
+public sealed class RabbitPublisher(IConfiguration configuration) : IEventPublisher, IAsyncDisposable
 {
     private readonly SemaphoreSlim _connectionLock = new(1, 1);
     private IConnection? _connection;
@@ -12,10 +12,15 @@ public sealed class RabbitPublisher(IConfiguration configuration) : IAsyncDispos
     public async Task PublishAsync(OrderCreatedIntegrationEvent message, CancellationToken cancellationToken)
     {
         var connection = await GetConnectionAsync(cancellationToken);
-        await using var channel = await connection.CreateChannelAsync(cancellationToken: cancellationToken);
-        await channel.ExchangeDeclareAsync(RabbitTopology.Exchange, ExchangeType.Direct, durable: true);
-        await channel.QueueDeclareAsync(RabbitTopology.Queue, durable: true, exclusive: false, autoDelete: false);
-        await channel.QueueBindAsync(RabbitTopology.Queue, RabbitTopology.Exchange, RabbitTopology.RoutingKey);
+        var channelOptions = new CreateChannelOptions(
+            publisherConfirmationsEnabled: true, publisherConfirmationTrackingEnabled: true);
+        await using var channel = await connection.CreateChannelAsync(channelOptions, cancellationToken);
+        await channel.ExchangeDeclareAsync(RabbitTopology.Exchange, ExchangeType.Direct, durable: true,
+            cancellationToken: cancellationToken);
+        await channel.QueueDeclareAsync(RabbitTopology.Queue, durable: true, exclusive: false, autoDelete: false,
+            cancellationToken: cancellationToken);
+        await channel.QueueBindAsync(RabbitTopology.Queue, RabbitTopology.Exchange, RabbitTopology.RoutingKey,
+            cancellationToken: cancellationToken);
 
         var properties = new BasicProperties
         {
@@ -26,7 +31,7 @@ public sealed class RabbitPublisher(IConfiguration configuration) : IAsyncDispos
         await channel.BasicPublishAsync(
             RabbitTopology.Exchange,
             RabbitTopology.RoutingKey,
-            mandatory: false,
+            mandatory: true,
             basicProperties: properties,
             body: JsonSerializer.SerializeToUtf8Bytes(message),
             cancellationToken: cancellationToken);

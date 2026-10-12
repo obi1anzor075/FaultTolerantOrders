@@ -1,4 +1,3 @@
-using Contracts;
 using Microsoft.EntityFrameworkCore;
 using OrderService.Api;
 
@@ -6,21 +5,30 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<OrderDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Orders")));
-builder.Services.AddSingleton<RabbitPublisher>();
+builder.Services.AddSingleton<IEventPublisher, RabbitPublisher>();
+builder.Services.AddSingleton(TimeProvider.System);
+builder.Services.AddScoped<OrderWriter>();
+builder.Services.AddScoped<OutboxDelivery>();
+builder.Services.AddScoped<OutboxDispatcher>();
+builder.Services.AddOptions<OutboxOptions>()
+    .Bind(builder.Configuration.GetSection("Outbox"))
+    .Validate(options => options.PollIntervalMilliseconds > 0 && options.BatchSize is > 0 and <= 100 &&
+                         options.PublishTimeoutSeconds is > 0 and <= 60, "Invalid Outbox timing or batch size")
+    .ValidateOnStart();
+builder.Services.AddHostedService<OutboxProcessor>();
 
 var app = builder.Build();
 
 await using (var scope = app.Services.CreateAsyncScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
-    await db.Database.EnsureCreatedAsync();
+    await db.Database.MigrateAsync();
 }
 
 app.MapPost("/api/orders", async (
     CreateOrderRequest request,
     HttpContext http,
-    OrderDbContext db,
-    RabbitPublisher publisher,
+    OrderWriter writer,
     ILogger<Program> logger,
     CancellationToken cancellationToken) =>
 {
@@ -30,56 +38,17 @@ app.MapPost("/api/orders", async (
         return Results.BadRequest(new { error = "UserId and at least one valid item are required." });
     }
 
-    var order = new Order
-    {
-        Id = Guid.NewGuid(),
-        UserId = request.UserId,
-        CreatedAt = DateTimeOffset.UtcNow,
-        Items = request.Items.Select(item => new OrderItem
-        {
-            Id = Guid.NewGuid(),
-            ProductId = item.ProductId,
-            Quantity = item.Quantity,
-            UnitPrice = item.UnitPrice
-        }).ToList()
-    };
-    order.Total = order.Items.Sum(item => item.Quantity * item.UnitPrice);
+    var order = await writer.CreateAsync(request, cancellationToken);
+    logger.LogInformation("Committed order {OrderId} and pending outbox {MessageId}", order.Id, order.MessageId);
 
-    db.Orders.Add(order);
-    await db.SaveChangesAsync(cancellationToken);
-
-    // Deliberate failure window in the baseline: the order is committed, but no event exists yet
+    // The same crash point as baseline; now the event is already durable in PostgreSQL.
     if (app.Environment.IsDevelopment() &&
         http.Request.Headers.TryGetValue("X-Fault-After-Commit", out var fault) && fault == "true")
     {
-        Environment.FailFast($"Injected crash after committing order {order.Id}");
+        Environment.FailFast($"Injected crash after committing order {order.Id} and outbox {order.MessageId}");
     }
 
-    var integrationEvent = new OrderCreatedIntegrationEvent(
-        Guid.NewGuid(), order.Id, order.UserId, order.Total, order.CreatedAt);
-
-    try
-    {
-        await publisher.PublishAsync(integrationEvent, cancellationToken);
-    }
-    catch (Exception exception)
-    {
-        logger.LogError(exception, "Order {OrderId} was saved but its event was not published", order.Id);
-        return Results.Json(new
-        {
-            error = "Order was saved, but event publication failed.",
-            orderId = order.Id
-        }, statusCode: StatusCodes.Status503ServiceUnavailable);
-    }
-
-    return Results.Created($"/api/orders/{order.Id}", new
-    {
-        order.Id,
-        order.UserId,
-        order.Total,
-        order.CreatedAt,
-        integrationEvent.MessageId
-    });
+    return Results.Created($"/api/orders/{order.Id}", order);
 });
 
 app.MapGet("/api/orders", async (OrderDbContext db, CancellationToken cancellationToken) =>

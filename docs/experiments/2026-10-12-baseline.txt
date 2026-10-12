@@ -1,0 +1,796 @@
+﻿rabbitmq-1             | 2026-10-12T09:23:35.344494213Z 2026-10-12 09:23:35.334217+00:00 [notice] <0.45.0> Application syslog exited with reason: stopped
+order-api-1            | 2026-10-12T09:24:36.761580859Z Cannot load library libgssapi_krb5.so.2 
+rabbitmq-1             | 2026-10-12T09:23:35.344635393Z 2026-10-12 09:23:35.344186+00:00 [notice] <0.209.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+rabbitmq-1             | 2026-10-12T09:23:35.345904019Z [38;5;87m2026-10-12 09:23:35.345614+00:00 [notice] <0.209.0> Logging: configured log handlers are now ACTIVE[0m
+order-api-1            | 2026-10-12T09:24:36.761623795Z Error: libgssapi_krb5.so.2: cannot open shared object file: No such file or directory
+notification-worker-1  | 2026-10-12T09:24:36.545024806Z info: Microsoft.Hosting.Lifetime[0]
+notification-worker-1  | 2026-10-12T09:24:36.545075457Z       Application started. Press Ctrl+C to shut down.
+order-api-1            | 2026-10-12T09:24:36.900155109Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+notification-worker-1  | 2026-10-12T09:24:36.550628091Z info: Microsoft.Hosting.Lifetime[0]
+rabbitmq-1             | 2026-10-12T09:23:35.359400525Z 2026-10-12 09:23:35.358904+00:00 [info] <0.209.0> ra: starting system coordination[0m
+order-api-1            | 2026-10-12T09:24:36.900187714Z       Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+order-api-1            | 2026-10-12T09:24:36.900192654Z       SELECT 1
+order-api-1            | 2026-10-12T09:24:36.970722589Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+order-api-1            | 2026-10-12T09:24:36.970759994Z       Executed DbCommand (54ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+order-api-1            | 2026-10-12T09:24:36.970767599Z       SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+order-api-1            | 2026-10-12T09:24:36.970772850Z       FROM pg_class AS cls
+order-api-1            | 2026-10-12T09:24:36.970777158Z       JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+order-api-1            | 2026-10-12T09:24:36.970781758Z       WHERE
+notification-worker-1  | 2026-10-12T09:24:36.550662530Z       Hosting environment: Development
+notification-worker-1  | 2026-10-12T09:24:36.550668682Z info: Microsoft.Hosting.Lifetime[0]
+order-api-1            | 2026-10-12T09:24:36.970785966Z               cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+notification-worker-1  | 2026-10-12T09:24:36.550673121Z       Content root path: /app
+order-api-1            | 2026-10-12T09:24:36.970790695Z               ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+notification-worker-1  | 2026-10-12T09:24:37.193677811Z Cannot load library libgssapi_krb5.so.2 
+order-api-1            | 2026-10-12T09:24:36.970795445Z               -- Exclude tables which are members of PG extensions
+notification-worker-1  | 2026-10-12T09:24:37.193707981Z Error: libgssapi_krb5.so.2: cannot open shared object file: No such file or directory
+order-api-1            | 2026-10-12T09:24:36.970804603Z               NOT EXISTS (
+order-api-1            | 2026-10-12T09:24:36.970809353Z                   SELECT 1 FROM pg_depend WHERE
+order-api-1            | 2026-10-12T09:24:36.970812429Z                       classid=(
+notification-worker-1  | 2026-10-12T09:24:37.294971397Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+notification-worker-1  | 2026-10-12T09:24:37.295004864Z       Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+notification-worker-1  | 2026-10-12T09:24:37.295010315Z       SELECT 1
+notification-worker-1  | 2026-10-12T09:24:37.335458956Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+notification-worker-1  | 2026-10-12T09:24:37.335485600Z       Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+notification-worker-1  | 2026-10-12T09:24:37.335489528Z       SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+rabbitmq-1             | 2026-10-12T09:23:35.359431926Z 2026-10-12 09:23:35.359109+00:00 [info] <0.209.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@36f14fb1710a/coordination/rabbit@36f14fb1710a[0m
+rabbitmq-1             | 2026-10-12T09:23:35.373626078Z 2026-10-12 09:23:35.373198+00:00 [info] <0.498.0> ra_coordination_log_ets: in system coordination initialising. Mem table opts: [set,{write_concurrency,auto},public,{compressed,false}][0m
+rabbitmq-1             | 2026-10-12T09:23:35.451092369Z 2026-10-12 09:23:35.450697+00:00 [info] <0.504.0> ra system 'coordination' running pre init for 0 registered servers[0m
+order-api-1            | 2026-10-12T09:24:36.970815295Z                           SELECT cls.oid
+order-api-1            | 2026-10-12T09:24:36.970818221Z                           FROM pg_class AS cls
+order-api-1            | 2026-10-12T09:24:36.970821146Z                                    JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+order-api-1            | 2026-10-12T09:24:36.970824042Z                           WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+order-api-1            | 2026-10-12T09:24:36.970826928Z                       ) AND
+order-api-1            | 2026-10-12T09:24:36.970829764Z                       objid=cls.oid AND
+rabbitmq-1             | 2026-10-12T09:23:35.458599259Z 2026-10-12 09:23:35.458232+00:00 [info] <0.505.0> ra: meta data store initialised for system coordination. 0 record(s) recovered[0m
+rabbitmq-1             | 2026-10-12T09:23:35.465896274Z 2026-10-12 09:23:35.465517+00:00 [info] <0.511.0> segment_writer: upgrading segment file names to new format in dirctory /var/lib/rabbitmq/mnesia/rabbit@36f14fb1710a/coordination/rabbit@36f14fb1710a[0m
+order-api-1            | 2026-10-12T09:24:36.970832700Z                       deptype IN ('e', 'x')
+order-api-1            | 2026-10-12T09:24:36.970835635Z               )
+order-api-1            | 2026-10-12T09:24:37.102389051Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+notification-worker-1  | 2026-10-12T09:24:37.335492624Z       FROM pg_class AS cls
+rabbitmq-1             | 2026-10-12T09:23:36.697967978Z [38;5;87m2026-10-12 09:23:36.697497+00:00 [notice] <0.513.0> WAL in coordination initialising with name ra_coordination_log_wal[0m
+notification-worker-1  | 2026-10-12T09:24:37.335495530Z       JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+order-api-1            | 2026-10-12T09:24:37.102416776Z       Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+order-api-1            | 2026-10-12T09:24:37.102420614Z       CREATE TABLE "Orders" (
+order-api-1            | 2026-10-12T09:24:37.102423870Z           "Id" uuid NOT NULL,
+order-api-1            | 2026-10-12T09:24:37.102426977Z           "UserId" uuid NOT NULL,
+order-api-1            | 2026-10-12T09:24:37.102432187Z           "Total" numeric(18,2) NOT NULL,
+notification-worker-1  | 2026-10-12T09:24:37.335498405Z       WHERE
+notification-worker-1  | 2026-10-12T09:24:37.335501201Z               cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+notification-worker-1  | 2026-10-12T09:24:37.335504027Z               ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+notification-worker-1  | 2026-10-12T09:24:37.335506892Z               -- Exclude tables which are members of PG extensions
+rabbitmq-1             | 2026-10-12T09:23:37.168987965Z 2026-10-12 09:23:37.168597+00:00 [info] <0.209.0> ra: starting system quorum_queues[0m
+notification-worker-1  | 2026-10-12T09:24:37.335509718Z               NOT EXISTS (
+rabbitmq-1             | 2026-10-12T09:23:37.169025547Z 2026-10-12 09:23:37.168682+00:00 [info] <0.209.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@36f14fb1710a/quorum/rabbit@36f14fb1710a[0m
+rabbitmq-1             | 2026-10-12T09:23:37.170059730Z 2026-10-12 09:23:37.169715+00:00 [info] <0.517.0> ra_log_ets: in system quorum_queues initialising. Mem table opts: [set,{write_concurrency,auto},public,{compressed,true}][0m
+notification-worker-1  | 2026-10-12T09:24:37.335512484Z                   SELECT 1 FROM pg_depend WHERE
+notification-worker-1  | 2026-10-12T09:24:37.335515279Z                       classid=(
+rabbitmq-1             | 2026-10-12T09:23:37.171409131Z 2026-10-12 09:23:37.171100+00:00 [info] <0.521.0> ra system 'quorum_queues' running pre init for 0 registered servers[0m
+order-api-1            | 2026-10-12T09:24:37.102435173Z           "CreatedAt" timestamp with time zone NOT NULL,
+rabbitmq-1             | 2026-10-12T09:23:37.172552063Z 2026-10-12 09:23:37.172246+00:00 [info] <0.522.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered[0m
+order-api-1            | 2026-10-12T09:24:37.102438219Z           CONSTRAINT "PK_Orders" PRIMARY KEY ("Id")
+order-api-1            | 2026-10-12T09:24:37.102441185Z       );
+order-api-1            | 2026-10-12T09:24:37.105207556Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+order-api-1            | 2026-10-12T09:24:37.105227516Z       Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+rabbitmq-1             | 2026-10-12T09:23:37.172937486Z 2026-10-12 09:23:37.172593+00:00 [info] <0.528.0> segment_writer: upgrading segment file names to new format in dirctory /var/lib/rabbitmq/mnesia/rabbit@36f14fb1710a/quorum/rabbit@36f14fb1710a[0m
+rabbitmq-1             | 2026-10-12T09:23:37.330459308Z [38;5;87m2026-10-12 09:23:37.330143+00:00 [notice] <0.530.0> WAL in quorum_queues initialising with name ra_log_wal[0m
+rabbitmq-1             | 2026-10-12T09:23:37.697801816Z 2026-10-12 09:23:37.697383+00:00 [info] <0.534.0> ra_system_recover: ra system 'quorum_queues' server recovery strategy rabbit_quorum_queue:system_recover[0m
+rabbitmq-1             | 2026-10-12T09:23:37.698098255Z 2026-10-12 09:23:37.697559+00:00 [info] <0.534.0> [rabbit_quorum_queue:system_recover/1] rabbit not booted, skipping queue recovery[0m
+notification-worker-1  | 2026-10-12T09:24:37.335518065Z                           SELECT cls.oid
+rabbitmq-1             | 2026-10-12T09:23:37.698164223Z 2026-10-12 09:23:37.697767+00:00 [info] <0.209.0> ra: starting system coordination[0m
+rabbitmq-1             | 2026-10-12T09:23:37.698337973Z 2026-10-12 09:23:37.697812+00:00 [info] <0.209.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@36f14fb1710a/coordination/rabbit@36f14fb1710a[0m
+order-api-1            | 2026-10-12T09:24:37.105231654Z       CREATE TABLE "OrderItems" (
+order-api-1            | 2026-10-12T09:24:37.105234870Z           "Id" uuid NOT NULL,
+order-api-1            | 2026-10-12T09:24:37.105237896Z           "OrderId" uuid NOT NULL,
+rabbitmq-1             | 2026-10-12T09:23:50.675916004Z [38;5;87m2026-10-12 09:23:50.675072+00:00 [notice] <0.536.0> RabbitMQ metadata store: candidate -> leader in term: 1 machine version: 3, last applied 0[0m
+rabbitmq-1             | 2026-10-12T09:23:50.677338147Z 2026-10-12 09:23:50.676881+00:00 [info] <0.209.0> [0m
+rabbitmq-1             | 2026-10-12T09:23:50.677974417Z 2026-10-12 09:23:50.676881+00:00 [info] <0.209.0>  Starting RabbitMQ 4.3.6 on Erlang 27.3.4.18 [jit][0m
+notification-worker-1  | 2026-10-12T09:24:37.335520830Z                           FROM pg_class AS cls
+notification-worker-1  | 2026-10-12T09:24:37.335523646Z                                    JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+rabbitmq-1             | 2026-10-12T09:23:50.677988203Z 2026-10-12 09:23:50.676881+00:00 [info] <0.209.0>  Copyright (c) 2007-2026 Broadcom Inc and/or its subsidiaries[0m
+rabbitmq-1             | 2026-10-12T09:23:50.677993564Z 2026-10-12 09:23:50.676881+00:00 [info] <0.209.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com[0m
+notification-worker-1  | 2026-10-12T09:24:37.335526532Z                           WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+notification-worker-1  | 2026-10-12T09:24:37.335529377Z                       ) AND
+rabbitmq-1             | 2026-10-12T09:23:50.679118467Z 
+rabbitmq-1             | 2026-10-12T09:23:50.679144397Z   ##  ##      RabbitMQ 4.3.6
+rabbitmq-1             | 2026-10-12T09:23:50.679149897Z   ##  ##
+order-api-1            | 2026-10-12T09:24:37.105240802Z           "ProductId" uuid NOT NULL,
+order-api-1            | 2026-10-12T09:24:37.105243728Z           "Quantity" integer NOT NULL,
+rabbitmq-1             | 2026-10-12T09:23:50.679157462Z   ##########  Copyright (c) 2007-2026 Broadcom Inc and/or its subsidiaries
+rabbitmq-1             | 2026-10-12T09:23:50.679163895Z   ######  ##
+order-api-1            | 2026-10-12T09:24:37.105246694Z           "UnitPrice" numeric(18,2) NOT NULL,
+rabbitmq-1             | 2026-10-12T09:23:50.679168974Z   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+rabbitmq-1             | 2026-10-12T09:23:50.679173804Z 
+rabbitmq-1             | 2026-10-12T09:23:50.679182000Z   Erlang:      27.3.4.18 [jit]
+notification-worker-1  | 2026-10-12T09:24:37.335532153Z                       objid=cls.oid AND
+notification-worker-1  | 2026-10-12T09:24:37.335534939Z                       deptype IN ('e', 'x')
+rabbitmq-1             | 2026-10-12T09:23:50.679187230Z   TLS Library: OpenSSL - OpenSSL 3.5.9 29 Sep 2026
+rabbitmq-1             | 2026-10-12T09:23:50.679191718Z   Release series support status: see https://www.rabbitmq.com/release-information
+rabbitmq-1             | 2026-10-12T09:23:50.679196127Z 
+order-api-1            | 2026-10-12T09:24:37.105249570Z           CONSTRAINT "PK_OrderItems" PRIMARY KEY ("Id"),
+order-api-1            | 2026-10-12T09:24:37.105252576Z           CONSTRAINT "FK_OrderItems_Orders_OrderId" FOREIGN KEY ("OrderId") REFERENCES "Orders" ("Id") ON DELETE CASCADE
+rabbitmq-1             | 2026-10-12T09:23:50.679200065Z   Doc guides:  https://www.rabbitmq.com/docs
+order-api-1            | 2026-10-12T09:24:37.105255852Z       );
+order-api-1            | 2026-10-12T09:24:37.106283471Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+notification-worker-1  | 2026-10-12T09:24:37.335537734Z               )
+notification-worker-1  | 2026-10-12T09:24:37.428929388Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+order-api-1            | 2026-10-12T09:24:37.106296748Z       Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+order-api-1            | 2026-10-12T09:24:37.106300695Z       CREATE INDEX "IX_OrderItems_OrderId" ON "OrderItems" ("OrderId");
+notification-worker-1  | 2026-10-12T09:24:37.428946623Z       Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+notification-worker-1  | 2026-10-12T09:24:37.428950410Z       CREATE TABLE "Notifications" (
+notification-worker-1  | 2026-10-12T09:24:37.428953647Z           "Id" uuid NOT NULL,
+notification-worker-1  | 2026-10-12T09:24:37.428963897Z           "MessageId" uuid NOT NULL,
+notification-worker-1  | 2026-10-12T09:24:37.428966983Z           "OrderId" uuid NOT NULL,
+rabbitmq-1             | 2026-10-12T09:23:50.679203892Z   Support:     https://www.rabbitmq.com/docs/contact
+rabbitmq-1             | 2026-10-12T09:23:50.679207970Z   Tutorials:   https://www.rabbitmq.com/tutorials
+rabbitmq-1             | 2026-10-12T09:23:50.679211767Z   Monitoring:  https://www.rabbitmq.com/docs/monitoring
+rabbitmq-1             | 2026-10-12T09:23:50.679215715Z   Upgrading:   https://www.rabbitmq.com/docs/upgrade
+order-api-1            | 2026-10-12T09:24:37.240484149Z warn: Microsoft.AspNetCore.Hosting.Diagnostics[15]
+order-api-1            | 2026-10-12T09:24:37.240508337Z       Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:8080'.
+notification-worker-1  | 2026-10-12T09:24:37.428969859Z           "UserId" uuid NOT NULL,
+notification-worker-1  | 2026-10-12T09:24:37.428972685Z           "Total" numeric(18,2) NOT NULL,
+order-api-1            | 2026-10-12T09:24:37.260998697Z info: Microsoft.Hosting.Lifetime[14]
+order-api-1            | 2026-10-12T09:24:37.261027285Z       Now listening on: http://[::]:8080
+notification-worker-1  | 2026-10-12T09:24:37.428975521Z           "CreatedAt" timestamp with time zone NOT NULL,
+notification-worker-1  | 2026-10-12T09:24:37.428978436Z           CONSTRAINT "PK_Notifications" PRIMARY KEY ("Id")
+order-api-1            | 2026-10-12T09:24:37.261670243Z info: Microsoft.Hosting.Lifetime[0]
+order-api-1            | 2026-10-12T09:24:37.261686826Z       Application started. Press Ctrl+C to shut down.
+order-api-1            | 2026-10-12T09:24:37.261691836Z info: Microsoft.Hosting.Lifetime[0]
+rabbitmq-1             | 2026-10-12T09:23:50.679220183Z 
+order-api-1            | 2026-10-12T09:24:37.261696435Z       Hosting environment: Development
+order-api-1            | 2026-10-12T09:24:37.261700654Z info: Microsoft.Hosting.Lifetime[0]
+notification-worker-1  | 2026-10-12T09:24:37.428981422Z       );
+notification-worker-1  | 2026-10-12T09:24:38.721732682Z info: NotificationService.Worker.Worker[0]
+notification-worker-1  | 2026-10-12T09:24:38.721771960Z       Listening for OrderCreated events
+order-api-1            | 2026-10-12T09:24:37.261705012Z       Content root path: /app
+order-api-1            | 2026-10-12T09:28:09.162980608Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+notification-worker-1  | 2026-10-12T09:28:09.729384205Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+order-api-1            | 2026-10-12T09:28:09.163067175Z       Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Decimal), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+rabbitmq-1             | 2026-10-12T09:23:50.679224241Z   Logs: <stdout>
+notification-worker-1  | 2026-10-12T09:28:09.729465602Z       Executed DbCommand (120ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = Decimal), @p5='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+notification-worker-1  | 2026-10-12T09:28:09.729473227Z       INSERT INTO "Notifications" ("Id", "CreatedAt", "MessageId", "OrderId", "Total", "UserId")
+order-api-1            | 2026-10-12T09:28:09.163079459Z       INSERT INTO "Orders" ("Id", "CreatedAt", "Total", "UserId")
+order-api-1            | 2026-10-12T09:28:09.163085320Z       VALUES (@p0, @p1, @p2, @p3);
+notification-worker-1  | 2026-10-12T09:28:09.729478096Z       VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+notification-worker-1  | 2026-10-12T09:28:09.748487230Z info: NotificationService.Worker.Worker[0]
+order-api-1            | 2026-10-12T09:28:09.163089588Z       INSERT INTO "OrderItems" ("Id", "OrderId", "ProductId", "Quantity", "UnitPrice")
+order-api-1            | 2026-10-12T09:28:09.163094157Z       VALUES (@p4, @p5, @p6, @p7, @p8);
+notification-worker-1  | 2026-10-12T09:28:09.748514193Z       Created notification for order 9346d211-b010-4b21-a71d-9fcc795a0476
+rabbitmq-1             | 2026-10-12T09:23:50.679228750Z 
+rabbitmq-1             | 2026-10-12T09:23:50.679233068Z   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+rabbitmq-1             | 2026-10-12T09:23:50.679237407Z 
+rabbitmq-1             | 2026-10-12T09:23:50.680023333Z   Starting broker...2026-10-12 09:23:50.679419+00:00 [info] <0.209.0> [0m
+rabbitmq-1             | 2026-10-12T09:23:50.680042670Z 2026-10-12 09:23:50.679419+00:00 [info] <0.209.0>  node           : rabbit@36f14fb1710a[0m
+order-api-1            | 2026-10-12T09:29:00.581716989Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+rabbitmq-1             | 2026-10-12T09:23:50.680060495Z 2026-10-12 09:23:50.679419+00:00 [info] <0.209.0>  home dir       : /var/lib/rabbitmq[0m
+order-api-1            | 2026-10-12T09:29:00.581761231Z       Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+order-api-1            | 2026-10-12T09:29:00.581765909Z       SELECT o."Id", o."UserId", o."Total", o."CreatedAt"
+rabbitmq-1             | 2026-10-12T09:23:50.680065665Z 2026-10-12 09:23:50.679419+00:00 [info] <0.209.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf[0m
+order-api-1            | 2026-10-12T09:29:00.581770126Z       FROM "Orders" AS o
+order-api-1            | 2026-10-12T09:29:00.581773910Z       ORDER BY o."CreatedAt"
+rabbitmq-1             | 2026-10-12T09:23:50.680070073Z 2026-10-12 09:23:50.679419+00:00 [info] <0.209.0>  log(s)         : <stdout>[0m
+order-api-1            | 2026-10-12T09:29:40.018542463Z fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+rabbitmq-1             | 2026-10-12T09:23:50.680073981Z 2026-10-12 09:23:50.679419+00:00 [info] <0.209.0>  data dir       : /var/lib/rabbitmq/mnesia/rabbit@36f14fb1710a[0m
+rabbitmq-1             | 2026-10-12T09:23:50.907899478Z [38;5;87m2026-10-12 09:23:50.907296+00:00 [notice] <0.543.0> Feature flags: attempt to enable `detailed_queues_endpoint`...[0m
+rabbitmq-1             | 2026-10-12T09:23:50.916098204Z [38;5;87m2026-10-12 09:23:50.915606+00:00 [notice] <0.543.0> Feature flags: `detailed_queues_endpoint` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:50.916136068Z [38;5;87m2026-10-12 09:23:50.915680+00:00 [notice] <0.543.0> Feature flags: attempt to enable `khepri_db`...[0m
+rabbitmq-1             | 2026-10-12T09:23:50.984275804Z [38;5;87m2026-10-12 09:23:50.983808+00:00 [notice] <0.543.0> Feature flags: `khepri_db` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:50.984308307Z [38;5;87m2026-10-12 09:23:50.983893+00:00 [notice] <0.543.0> Feature flags: attempt to enable `message_containers_deaths_v2`...[0m
+rabbitmq-1             | 2026-10-12T09:23:50.995081539Z [38;5;87m2026-10-12 09:23:50.994642+00:00 [notice] <0.543.0> Feature flags: `message_containers_deaths_v2` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:50.995122629Z [38;5;87m2026-10-12 09:23:50.994737+00:00 [notice] <0.543.0> Feature flags: attempt to enable `quorum_queue_non_voters`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.026184623Z [38;5;87m2026-10-12 09:23:51.025661+00:00 [notice] <0.543.0> Feature flags: `quorum_queue_non_voters` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:51.026223829Z [38;5;87m2026-10-12 09:23:51.025837+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbit_exchange_type_local_random`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.040876084Z [38;5;87m2026-10-12 09:23:51.040477+00:00 [notice] <0.543.0> Feature flags: `rabbit_exchange_type_local_random` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:51.041344316Z [38;5;87m2026-10-12 09:23:51.040563+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.0.0`...[0m
+order-api-1            | 2026-10-12T09:29:40.018578917Z       An unhandled exception has occurred while executing the request.
+order-api-1            | 2026-10-12T09:29:40.018583859Z       Microsoft.AspNetCore.Http.BadHttpRequestException: Implicit body inferred for parameter "request" but no body was provided. Did you mean to use a Service instead?
+rabbitmq-1             | 2026-10-12T09:23:51.101134778Z [38;5;87m2026-10-12 09:23:51.100741+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.0.0` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:51.101167561Z [38;5;87m2026-10-12 09:23:51.100819+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.1.0`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.113616132Z [38;5;87m2026-10-12 09:23:51.113195+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.1.0` enabled[0m
+order-api-1            | 2026-10-12T09:29:40.018588351Z          at lambda_method1(Closure, Object, HttpContext, Object)
+rabbitmq-1             | 2026-10-12T09:23:51.114791176Z [38;5;87m2026-10-12 09:23:51.113268+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.2.0`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.185321248Z [38;5;87m2026-10-12 09:23:51.184894+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.2.0` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:51.191054831Z 2026-10-12 09:23:51.190621+00:00 [info] <0.209.0> Running boot step pre_boot defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251452735Z 2026-10-12 09:23:51.190728+00:00 [info] <0.209.0> Running boot step rabbit_global_counters defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251537379Z 2026-10-12 09:23:51.191651+00:00 [info] <0.209.0> Running boot step rabbit_osiris_metrics defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251545725Z 2026-10-12 09:23:51.191857+00:00 [info] <0.209.0> Running boot step rabbit_core_metrics defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251551376Z 2026-10-12 09:23:51.194870+00:00 [info] <0.209.0> Running boot step worker_pool defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:40.018592291Z          at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:51.251556145Z 2026-10-12 09:23:51.195161+00:00 [info] <0.542.0> Will use 12 processes for default worker pool[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251563389Z 2026-10-12 09:23:51.195219+00:00 [info] <0.542.0> Starting worker pool 'worker_pool' with 12 processes in it[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251569781Z 2026-10-12 09:23:51.206043+00:00 [info] <0.209.0> Running boot step rabbit_registry defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251574911Z 2026-10-12 09:23:51.206226+00:00 [info] <0.209.0> Running boot step database defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251579630Z 2026-10-12 09:23:51.207331+00:00 [info] <0.209.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251584249Z 2026-10-12 09:23:51.208035+00:00 [info] <0.543.0> Feature flags: starting an unclustered node for the first time: all stable feature flags will be enabled by default[0m
+order-api-1            | 2026-10-12T09:29:40.018597013Z       --- End of stack trace from previous location ---
+order-api-1            | 2026-10-12T09:29:40.018600923Z          at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+rabbitmq-1             | 2026-10-12T09:23:51.251588718Z [38;5;87m2026-10-12 09:23:51.208855+00:00 [notice] <0.543.0> Feature flags: attempt to enable `tie_binding_to_dest_with_keep_while_cond`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251593547Z [38;5;87m2026-10-12 09:23:51.213095+00:00 [notice] <0.543.0> Feature flags: attempt to enable `rabbitmq_4.3.0`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.251598226Z [38;5;87m2026-10-12 09:23:51.223782+00:00 [notice] <0.543.0> Feature flags: `rabbitmq_4.3.0` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:51.561000867Z [38;5;87m2026-10-12 09:23:51.560601+00:00 [notice] <0.543.0> Feature flags: `tie_binding_to_dest_with_keep_while_cond` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:51.561040314Z [38;5;87m2026-10-12 09:23:51.560700+00:00 [notice] <0.543.0> Feature flags: attempt to enable `track_qq_members_uids`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.571013640Z [38;5;87m2026-10-12 09:23:51.570493+00:00 [notice] <0.543.0> Feature flags: `track_qq_members_uids` enabled[0m
+order-api-1            | 2026-10-12T09:29:52.307651055Z fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+order-api-1            | 2026-10-12T09:29:52.307687665Z       An unhandled exception has occurred while executing the request.
+rabbitmq-1             | 2026-10-12T09:23:51.571048187Z [38;5;87m2026-10-12 09:23:51.570562+00:00 [notice] <0.543.0> Feature flags: attempt to enable `topic_binding_projection_v5`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.574791868Z [38;5;87m2026-10-12 09:23:51.574432+00:00 [notice] <0.543.0> Feature flags: attempt to enable `topic_binding_projection_v4`...[0m
+rabbitmq-1             | 2026-10-12T09:23:51.918869623Z [38;5;87m2026-10-12 09:23:51.918474+00:00 [notice] <0.543.0> Feature flags: `topic_binding_projection_v4` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:53.463253020Z [38;5;87m2026-10-12 09:23:53.462769+00:00 [notice] <0.543.0> Feature flags: `topic_binding_projection_v5` enabled[0m
+rabbitmq-1             | 2026-10-12T09:23:53.463450419Z 2026-10-12 09:23:53.463090+00:00 [info] <0.209.0> DB: virgin node -> run peer discovery[0m
+rabbitmq-1             | 2026-10-12T09:23:53.463593609Z [38;5;214m2026-10-12 09:23:53.463266+00:00 [warning] <0.209.0> Classic peer discovery backend: list of nodes does not contain the local node [][0m
+rabbitmq-1             | 2026-10-12T09:23:53.463734141Z [38;5;87m2026-10-12 09:23:53.463357+00:00 [notice] <0.209.0> Found the following metadata store members: [{rabbitmq_metadata,[0m
+order-api-1            | 2026-10-12T09:29:52.307694298Z       Microsoft.AspNetCore.Http.BadHttpRequestException: Implicit body inferred for parameter "request" but no body was provided. Did you mean to use a Service instead?
+rabbitmq-1             | 2026-10-12T09:23:53.463753128Z [38;5;87m2026-10-12 09:23:53.463357+00:00 [notice] <0.209.0>                                               rabbit@36f14fb1710a}][0m
+order-api-1            | 2026-10-12T09:29:52.307699979Z          at lambda_method1(Closure, Object, HttpContext, Object)
+order-api-1            | 2026-10-12T09:29:52.307705129Z          at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+order-api-1            | 2026-10-12T09:29:52.307711531Z       --- End of stack trace from previous location ---
+order-api-1            | 2026-10-12T09:29:52.307716591Z          at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+order-api-1            | 2026-10-12T09:29:56.419489551Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+rabbitmq-1             | 2026-10-12T09:23:54.804376467Z 2026-10-12 09:23:54.804025+00:00 [info] <0.209.0> Running boot step tracking_metadata_store defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.804667162Z 2026-10-12 09:23:54.804230+00:00 [info] <0.805.0> Setting up a table for connection tracking on this node: tracked_connection[0m
+rabbitmq-1             | 2026-10-12T09:23:54.804680718Z 2026-10-12 09:23:54.804302+00:00 [info] <0.805.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost[0m
+order-api-1            | 2026-10-12T09:29:56.419522463Z       Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Decimal), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+rabbitmq-1             | 2026-10-12T09:23:54.804834415Z 2026-10-12 09:23:54.804352+00:00 [info] <0.805.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user[0m
+order-api-1            | 2026-10-12T09:29:56.419530313Z       INSERT INTO "Orders" ("Id", "CreatedAt", "Total", "UserId")
+order-api-1            | 2026-10-12T09:29:56.419536480Z       VALUES (@p0, @p1, @p2, @p3);
+order-api-1            | 2026-10-12T09:29:56.419541577Z       INSERT INTO "OrderItems" ("Id", "OrderId", "ProductId", "Quantity", "UnitPrice")
+order-api-1            | 2026-10-12T09:29:56.419547304Z       VALUES (@p4, @p5, @p6, @p7, @p8);
+order-api-1            | 2026-10-12T09:29:56.467957257Z Process terminated.
+rabbitmq-1             | 2026-10-12T09:23:54.804940811Z 2026-10-12 09:23:54.804425+00:00 [info] <0.805.0> Setting up a table for channel tracking on this node: tracked_channel[0m
+rabbitmq-1             | 2026-10-12T09:23:54.805045253Z 2026-10-12 09:23:54.804491+00:00 [info] <0.805.0> Setting up a table for channel tracking on this node: tracked_channel_per_user[0m
+rabbitmq-1             | 2026-10-12T09:23:54.805291204Z 2026-10-12 09:23:54.804611+00:00 [info] <0.209.0> Running boot step networking_metadata_store defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.805412983Z 2026-10-12 09:23:54.804799+00:00 [info] <0.209.0> Running boot step feature_flags defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.805424666Z 2026-10-12 09:23:54.805042+00:00 [info] <0.209.0> Running boot step rabbit_alarm defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468049413Z Injected crash after committing order ad665171-d54f-4111-99bc-a9e556fd0be0
+order-api-1            | 2026-10-12T09:29:56.468056192Z    at System.Environment.FailFast(System.Runtime.CompilerServices.StackCrawlMarkHandle, System.String, System.Runtime.CompilerServices.ObjectHandleOnStack, System.String)
+order-api-1            | 2026-10-12T09:29:56.468061699Z    at System.Environment.FailFast(System.Threading.StackCrawlMark ByRef, System.String, System.Exception, System.String)
+order-api-1            | 2026-10-12T09:29:56.468066755Z    at System.Environment.FailFast(System.String)
+rabbitmq-1             | 2026-10-12T09:23:54.820566211Z 2026-10-12 09:23:54.820137+00:00 [info] <0.810.0> Memory high watermark set to 4537 MiB (4758343680 bytes) of 7563 MiB (7930572800 bytes) total[0m
+rabbitmq-1             | 2026-10-12T09:23:54.824120058Z 2026-10-12 09:23:54.823747+00:00 [info] <0.812.0> Enabling free disk space monitoring (disk free space: 1009839489024, total memory: 7930572800)[0m
+order-api-1            | 2026-10-12T09:29:56.468071661Z    at Program+<>c__DisplayClass0_0+<<<Main>$>b__1>d.MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:54.824160608Z 2026-10-12 09:23:54.823829+00:00 [info] <0.812.0> Disk free limit set to 50MB[0m
+order-api-1            | 2026-10-12T09:29:56.468202397Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Program+<>c__DisplayClass0_0+<<<Main>$>b__1>d, OrderService.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].ExecutionContextCallback(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468216986Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.826168738Z 2026-10-12 09:23:54.825856+00:00 [info] <0.209.0> Running boot step auth_backend_plugins_check defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.826182345Z 2026-10-12 09:23:54.825978+00:00 [info] <0.209.0> Running boot step codec_correctness_check defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.826303203Z 2026-10-12 09:23:54.826020+00:00 [info] <0.209.0> Running boot step external_infrastructure defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.826425183Z 2026-10-12 09:23:54.826046+00:00 [info] <0.209.0> Running boot step rabbit_event defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468221531Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Program+<>c__DisplayClass0_0+<<<Main>$>b__1>d, OrderService.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468225877Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Program+<>c__DisplayClass0_0+<<<Main>$>b__1>d, OrderService.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468230383Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+order-api-1            | 2026-10-12T09:29:56.468233807Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468237111Z    at System.Threading.Tasks.Task`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].TrySetResult(Int32)
+rabbitmq-1             | 2026-10-12T09:23:54.826483817Z 2026-10-12 09:23:54.826261+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468240485Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].SetExistingTaskResult(System.Threading.Tasks.Task`1<Int32>, Int32)
+rabbitmq-1             | 2026-10-12T09:23:54.826773387Z 2026-10-12 09:23:54.826444+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_anonymous defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468244170Z    at Microsoft.EntityFrameworkCore.DbContext+<SaveChangesAsync>d__63.MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:54.827008800Z 2026-10-12 09:23:54.826600+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468248135Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.DbContext+<SaveChangesAsync>d__63, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].ExecutionContextCallback(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468252010Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+order-api-1            | 2026-10-12T09:29:56.468269782Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.DbContext+<SaveChangesAsync>d__63, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468273717Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.DbContext+<SaveChangesAsync>d__63, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:54.827103654Z 2026-10-12 09:23:54.826824+00:00 [info] <0.209.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.827190843Z 2026-10-12 09:23:54.826950+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_direct defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.827444733Z 2026-10-12 09:23:54.827049+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.827580816Z 2026-10-12 09:23:54.827185+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_headers defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.827625603Z 2026-10-12 09:23:54.827275+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_local_random defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468277412Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+order-api-1            | 2026-10-12T09:29:56.468280746Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.827812273Z 2026-10-12 09:23:54.827478+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_modulus_hash defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468289968Z    at System.Threading.Tasks.Task`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].TrySetResult(Int32)
+order-api-1            | 2026-10-12T09:29:56.468294183Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].SetExistingTaskResult(System.Threading.Tasks.Task`1<Int32>, Int32)
+rabbitmq-1             | 2026-10-12T09:23:54.827878210Z 2026-10-12 09:23:54.827641+00:00 [info] <0.209.0> Running boot step rabbit_exchange_type_topic defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468300751Z    at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy+<ExecuteAsync>d__7`2[[System.ValueTuple`2[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468497869Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy+<ExecuteAsync>d__7`2[[System.ValueTuple`2[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Npgsql.EntityFrameworkCore.PostgreSQL, Version=10.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].ExecutionContextCallback(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468510015Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+order-api-1            | 2026-10-12T09:29:56.468514000Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy+<ExecuteAsync>d__7`2[[System.ValueTuple`2[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Npgsql.EntityFrameworkCore.PostgreSQL, Version=10.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468531922Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy+<ExecuteAsync>d__7`2[[System.ValueTuple`2[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Npgsql.EntityFrameworkCore.PostgreSQL, Version=10.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:54.828029083Z 2026-10-12 09:23:54.827762+00:00 [info] <0.209.0> Running boot step rabbit_priority_queue defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.828072237Z 2026-10-12 09:23:54.827848+00:00 [info] <0.209.0> Priority queues enabled, real BQ is rabbit_variable_queue[0m
+rabbitmq-1             | 2026-10-12T09:23:54.828332439Z 2026-10-12 09:23:54.827939+00:00 [info] <0.209.0> Running boot step kernel_ready defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.828345083Z 2026-10-12 09:23:54.827975+00:00 [info] <0.209.0> Running boot step pg_local_amqp_connection defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.837985601Z 2026-10-12 09:23:54.837458+00:00 [info] <0.209.0> Running boot step pg_local_amqp_session defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468536508Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+order-api-1            | 2026-10-12T09:29:56.468539902Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468543156Z    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager+<SaveChangesAsync>d__117.MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468546601Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager+<SaveChangesAsync>d__117, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].ExecutionContextCallback(System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.838014917Z 2026-10-12 09:23:54.837639+00:00 [info] <0.209.0> Running boot step rabbit_sysmon_minder defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.838299347Z 2026-10-12 09:23:54.837879+00:00 [info] <0.209.0> Running boot step rabbit_epmd_monitor defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.839254672Z 2026-10-12 09:23:54.838982+00:00 [info] <0.820.0> epmd monitor knows us, inter-node communication (distribution) port: 25672[0m
+order-api-1            | 2026-10-12T09:29:56.468550506Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.839281724Z 2026-10-12 09:23:54.839087+00:00 [info] <0.209.0> Running boot step guid_generator defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468553890Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager+<SaveChangesAsync>d__117, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468557925Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager+<SaveChangesAsync>d__117, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468561670Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+order-api-1            | 2026-10-12T09:29:56.468565054Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468568328Z    at System.Threading.Tasks.Task`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].TrySetResult(Int32)
+order-api-1            | 2026-10-12T09:29:56.468576138Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].SetExistingTaskResult(System.Threading.Tasks.Task`1<Int32>, Int32)
+rabbitmq-1             | 2026-10-12T09:23:54.883289658Z 2026-10-12 09:23:54.882781+00:00 [info] <0.209.0> Running boot step rabbit_node_monitor defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.883349383Z 2026-10-12 09:23:54.883023+00:00 [info] <0.824.0> Starting rabbit_node_monitor[0m
+rabbitmq-1             | 2026-10-12T09:23:54.883365033Z 2026-10-12 09:23:54.883174+00:00 [info] <0.209.0> Running boot step delegate_sup defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.884180249Z 2026-10-12 09:23:54.883895+00:00 [info] <0.209.0> Running boot step rabbit_chaos defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468579913Z    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager+<SaveChangesAsync>d__113.MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468583447Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager+<SaveChangesAsync>d__113, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].ExecutionContextCallback(System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.884257087Z 2026-10-12 09:23:54.884037+00:00 [info] <0.209.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.884442856Z 2026-10-12 09:23:54.884101+00:00 [info] <0.209.0> Running boot step core_initialized defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.884454428Z 2026-10-12 09:23:54.884131+00:00 [info] <0.209.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.884667550Z 2026-10-12 09:23:54.884202+00:00 [info] <0.209.0> Running boot step rabbit_classic_queue_type defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.884691086Z 2026-10-12 09:23:54.884280+00:00 [info] <0.209.0> Running boot step rabbit_classic_queue defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468587252Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+order-api-1            | 2026-10-12T09:29:56.468590626Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager+<SaveChangesAsync>d__113, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468594751Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager+<SaveChangesAsync>d__113, Microsoft.EntityFrameworkCore, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468598726Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+order-api-1            | 2026-10-12T09:29:56.468602151Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468605455Z    at System.Threading.Tasks.Task`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].TrySetResult(Int32)
+order-api-1            | 2026-10-12T09:29:56.468608839Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].SetExistingTaskResult(System.Threading.Tasks.Task`1<Int32>, Int32)
+order-api-1            | 2026-10-12T09:29:56.468612584Z    at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase+<SaveChangesAsync>d__8.MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:54.884983511Z 2026-10-12 09:23:54.884365+00:00 [info] <0.209.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.884995695Z 2026-10-12 09:23:54.884416+00:00 [info] <0.209.0> Running boot step rabbit_definitions_hashing defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468616088Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Storage.RelationalDatabase+<SaveChangesAsync>d__8, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].ExecutionContextCallback(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468619963Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.885235629Z 2026-10-12 09:23:54.884474+00:00 [info] <0.209.0> Running boot step rabbit_exchange_parameters defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468627232Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Storage.RelationalDatabase+<SaveChangesAsync>d__8, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext(System.Threading.Thread)
+rabbitmq-1             | 2026-10-12T09:23:54.892708587Z 2026-10-12 09:23:54.892287+00:00 [info] <0.209.0> Running boot step rabbit_policies defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.893005046Z 2026-10-12 09:23:54.892692+00:00 [info] <0.209.0> Running boot step rabbit_quorum_queue_type defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468631217Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Storage.RelationalDatabase+<SaveChangesAsync>d__8, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:54.893058044Z 2026-10-12 09:23:54.892799+00:00 [info] <0.209.0> Running boot step rabbit_stream_queue defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.893340198Z 2026-10-12 09:23:54.892858+00:00 [info] <0.209.0> Running boot step rabbit_policy defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468634922Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+order-api-1            | 2026-10-12T09:29:56.468638256Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468641520Z    at System.Threading.Tasks.Task`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].TrySetResult(Int32)
+order-api-1            | 2026-10-12T09:29:56.468644955Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].SetExistingTaskResult(System.Threading.Tasks.Task`1<Int32>, Int32)
+order-api-1            | 2026-10-12T09:29:56.468648479Z    at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor+<ExecuteAsync>d__9.MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468654156Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor+<ExecuteAsync>d__9, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].ExecutionContextCallback(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468657961Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+order-api-1            | 2026-10-12T09:29:56.468662847Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor+<ExecuteAsync>d__9, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468666622Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor+<ExecuteAsync>d__9, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:54.893563881Z 2026-10-12 09:23:54.892971+00:00 [info] <0.209.0> Running boot step rabbit_quorum_event_subscriber defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468670487Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+rabbitmq-1             | 2026-10-12T09:23:54.893581405Z 2026-10-12 09:23:54.893065+00:00 [info] <0.209.0> Running boot step rabbit_quorum_queue defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468673821Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468680880Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].SetExistingTaskResult(System.Threading.Tasks.Task`1<System.Threading.Tasks.VoidTaskResult>, System.Threading.Tasks.VoidTaskResult)
+order-api-1            | 2026-10-12T09:29:56.468684705Z    at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction+<CommitAsync>d__17.MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468688129Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Storage.RelationalTransaction+<CommitAsync>d__17, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].ExecutionContextCallback(System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.894115503Z 2026-10-12 09:23:54.893852+00:00 [info] <0.209.0> Running boot step quorum_memory_alarm_handler defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468691994Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+order-api-1            | 2026-10-12T09:29:56.468695519Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Storage.RelationalTransaction+<CommitAsync>d__17, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468699333Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.EntityFrameworkCore.Storage.RelationalTransaction+<CommitAsync>d__17, Microsoft.EntityFrameworkCore.Relational, Version=10.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468703058Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+order-api-1            | 2026-10-12T09:29:56.468706392Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.894188528Z 2026-10-12 09:23:54.893917+00:00 [info] <0.209.0> Running boot step rabbit_stream_coordinator defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.894300721Z 2026-10-12 09:23:54.894077+00:00 [info] <0.209.0> Running boot step rabbit_vhost_limit defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468709737Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].SetExistingTaskResult(System.Threading.Tasks.Task`1<System.Threading.Tasks.VoidTaskResult>, System.Threading.Tasks.VoidTaskResult)
+order-api-1            | 2026-10-12T09:29:56.468713431Z    at Npgsql.NpgsqlTransaction+<Commit>d__17.MoveNext()
+rabbitmq-1             | 2026-10-12T09:23:54.894429163Z 2026-10-12 09:23:54.894172+00:00 [info] <0.209.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management[0m
+order-api-1            | 2026-10-12T09:29:56.468716825Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.NpgsqlTransaction+<Commit>d__17, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].ExecutionContextCallback(System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.894575535Z 2026-10-12 09:23:54.894258+00:00 [info] <0.209.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent[0m
+rabbitmq-1             | 2026-10-12T09:23:54.894765753Z 2026-10-12 09:23:54.894344+00:00 [info] <0.209.0> Management plugin: using rates mode 'basic'[0m
+rabbitmq-1             | 2026-10-12T09:23:54.894783868Z 2026-10-12 09:23:54.894560+00:00 [info] <0.209.0> Running boot step recovery defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.895013922Z 2026-10-12 09:23:54.894728+00:00 [info] <0.209.0> Running boot step prevent_startup_if_node_was_reset defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:29:56.468720530Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+order-api-1            | 2026-10-12T09:29:56.468723864Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.NpgsqlTransaction+<Commit>d__17, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468731874Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.NpgsqlTransaction+<Commit>d__17, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468735679Z    at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(System.Runtime.CompilerServices.IAsyncStateMachineBox, Boolean)
+order-api-1            | 2026-10-12T09:29:56.468739054Z    at System.Threading.Tasks.Task.RunContinuations(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468742298Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].SetExistingTaskResult(System.Threading.Tasks.Task`1<System.Threading.Tasks.VoidTaskResult>, System.Threading.Tasks.VoidTaskResult)
+order-api-1            | 2026-10-12T09:29:56.468745952Z    at Npgsql.Internal.NpgsqlConnector+<ExecuteInternalCommand>d__302.MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468749337Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.Internal.NpgsqlConnector+<ExecuteInternalCommand>d__302, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].ExecutionContextCallback(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468753081Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.895025204Z 2026-10-12 09:23:54.894812+00:00 [info] <0.209.0> Running boot step empty_db_check defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:54.895224566Z 2026-10-12 09:23:54.894924+00:00 [info] <0.209.0> Will seed default virtual host and user...[0m
+order-api-1            | 2026-10-12T09:29:56.468756526Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.Internal.NpgsqlConnector+<ExecuteInternalCommand>d__302, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].MoveNext(System.Threading.Thread)
+order-api-1            | 2026-10-12T09:29:56.468760531Z    at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.Internal.NpgsqlConnector+<ExecuteInternalCommand>d__302, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468764265Z    at Npgsql.Internal.NpgsqlConnector+<ReadMessageLong>d__234.MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468767630Z    at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1+StateMachineBox`1[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.Internal.NpgsqlConnector+<ReadMessageLong>d__234, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].ExecutionContextCallback(System.Object)
+order-api-1            | 2026-10-12T09:29:56.468771414Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+order-api-1            | 2026-10-12T09:29:56.468774759Z    at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1+StateMachineBox`1[[System.__Canon, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.Internal.NpgsqlConnector+<ReadMessageLong>d__234, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468782388Z    at Npgsql.Internal.NpgsqlReadBuffer+<<Ensure>g__EnsureLong|54_0>d.MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468791590Z    at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1+StateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.Internal.NpgsqlReadBuffer+<<Ensure>g__EnsureLong|54_0>d, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].ExecutionContextCallback(System.Object)
+rabbitmq-1             | 2026-10-12T09:23:54.895430306Z 2026-10-12 09:23:54.895130+00:00 [info] <0.209.0> Adding vhost '/' (description: 'Default virtual host', tags: [])[0m
+rabbitmq-1             | 2026-10-12T09:23:55.608985971Z 2026-10-12 09:23:55.608589+00:00 [info] <0.853.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@36f14fb1710a/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists[0m
+rabbitmq-1             | 2026-10-12T09:23:55.611238995Z 2026-10-12 09:23:55.610660+00:00 [info] <0.853.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'[0m
+order-api-1            | 2026-10-12T09:29:56.468795815Z    at System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+order-api-1            | 2026-10-12T09:29:56.468799320Z    at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1+StateMachineBox`1[[System.Threading.Tasks.VoidTaskResult, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Npgsql.Internal.NpgsqlReadBuffer+<<Ensure>g__EnsureLong|54_0>d, Npgsql, Version=10.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7]].MoveNext()
+order-api-1            | 2026-10-12T09:29:56.468803064Z    at System.Net.Sockets.SocketAsyncEventArgs.TransferCompletionCallbackCore(Int32, System.Memory`1<Byte>, System.Net.Sockets.SocketFlags, System.Net.Sockets.SocketError)
+rabbitmq-1             | 2026-10-12T09:23:55.756013572Z 2026-10-12 09:23:55.755634+00:00 [info] <0.853.0> Starting message stores for vhost '/'[0m
+rabbitmq-1             | 2026-10-12T09:23:55.758325831Z 2026-10-12 09:23:55.757920+00:00 [info] <0.853.0> Started message store of type transient for vhost '/'[0m
+order-api-1            | 2026-10-12T09:29:56.468806459Z    at System.Net.Sockets.SocketAsyncEngine.System.Threading.IThreadPoolWorkItem.Execute()
+rabbitmq-1             | 2026-10-12T09:23:55.798464286Z [38;5;214m2026-10-12 09:23:55.798004+00:00 [warning] <0.866.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch[0m
+rabbitmq-1             | 2026-10-12T09:23:55.799466342Z 2026-10-12 09:23:55.799182+00:00 [info] <0.853.0> Started message store of type persistent for vhost '/'[0m
+order-api-1            | 2026-10-12T09:29:56.468809783Z    at System.Threading.ThreadPoolWorkQueue.Dispatch()
+order-api-1            | 2026-10-12T09:29:56.468813047Z    at System.Threading.PortableThreadPool+WorkerThread.WorkerThreadStart()
+rabbitmq-1             | 2026-10-12T09:23:55.799477223Z 2026-10-12 09:23:55.799327+00:00 [info] <0.853.0> Recovering 0 queues of type rabbit_classic_queue took 118ms[0m
+order-api-1            | 2026-10-12T09:29:56.468816301Z    at System.Threading.Thread.StartCallback()
+rabbitmq-1             | 2026-10-12T09:23:55.799684900Z 2026-10-12 09:23:55.799370+00:00 [info] <0.853.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms[0m
+rabbitmq-1             | 2026-10-12T09:23:55.799697925Z 2026-10-12 09:23:55.799405+00:00 [info] <0.853.0> Recovering 0 queues of type rabbit_stream_queue took 0ms[0m
+rabbitmq-1             | 2026-10-12T09:23:55.829790024Z 2026-10-12 09:23:55.829288+00:00 [info] <0.209.0> Created user 'lab'[0m
+rabbitmq-1             | 2026-10-12T09:23:55.914562372Z 2026-10-12 09:23:55.914050+00:00 [info] <0.209.0> Successfully set user tags for user 'lab' to [administrator][0m
+rabbitmq-1             | 2026-10-12T09:23:55.991579229Z 2026-10-12 09:23:55.991032+00:00 [info] <0.209.0> Successfully set permissions for user 'lab' in virtual host '/' to '.*', '.*', '.*'[0m
+rabbitmq-1             | 2026-10-12T09:23:55.991755118Z 2026-10-12 09:23:55.991105+00:00 [info] <0.209.0> Running boot step rabbit_observer_cli defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:30:13.801800925Z Cannot load library libgssapi_krb5.so.2 
+order-api-1            | 2026-10-12T09:30:13.801832977Z Error: libgssapi_krb5.so.2: cannot open shared object file: No such file or directory
+order-api-1            | 2026-10-12T09:30:13.930731109Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+rabbitmq-1             | 2026-10-12T09:23:55.991957289Z 2026-10-12 09:23:55.991343+00:00 [info] <0.209.0> Running boot step rabbit_core_metrics_gc defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:30:13.930762529Z       Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+order-api-1            | 2026-10-12T09:30:13.930768010Z       SELECT 1
+order-api-1            | 2026-10-12T09:30:13.973757342Z info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+rabbitmq-1             | 2026-10-12T09:23:55.992781982Z 2026-10-12 09:23:55.991509+00:00 [info] <0.209.0> Running boot step background_gc defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:55.992794316Z 2026-10-12 09:23:55.991853+00:00 [info] <0.209.0> Running boot step channel_interceptor_priorities_check defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:30:13.973787460Z       Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+order-api-1            | 2026-10-12T09:30:13.973792210Z       SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+order-api-1            | 2026-10-12T09:30:13.973796097Z       FROM pg_class AS cls
+rabbitmq-1             | 2026-10-12T09:23:55.992823773Z 2026-10-12 09:23:55.991925+00:00 [info] <0.209.0> Running boot step rabbit_observer_cli_classic_queues defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:55.992834944Z 2026-10-12 09:23:55.992020+00:00 [info] <0.209.0> Running boot step rabbit_observer_cli_quorum_queues defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:55.992843451Z 2026-10-12 09:23:55.992079+00:00 [info] <0.209.0> Running boot step routing_ready defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:30:13.973799694Z       JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+rabbitmq-1             | 2026-10-12T09:23:55.993104501Z 2026-10-12 09:23:55.992136+00:00 [info] <0.209.0> Running boot step pre_flight defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:55.993121534Z 2026-10-12 09:23:55.992210+00:00 [info] <0.209.0> Running boot step notify_cluster defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:55.993362655Z 2026-10-12 09:23:55.992262+00:00 [info] <0.209.0> Running boot step networking defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:30:13.973803351Z       WHERE
+order-api-1            | 2026-10-12T09:30:13.973806948Z               cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+rabbitmq-1             | 2026-10-12T09:23:55.993377053Z 2026-10-12 09:23:55.992329+00:00 [info] <0.209.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:55.993530406Z 2026-10-12 09:23:55.992484+00:00 [info] <0.209.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:30:13.973810876Z               ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+order-api-1            | 2026-10-12T09:30:13.973826075Z               -- Exclude tables which are members of PG extensions
+order-api-1            | 2026-10-12T09:30:13.973829882Z               NOT EXISTS (
+order-api-1            | 2026-10-12T09:30:13.973833549Z                   SELECT 1 FROM pg_depend WHERE
+order-api-1            | 2026-10-12T09:30:13.973837076Z                       classid=(
+order-api-1            | 2026-10-12T09:30:13.973840683Z                           SELECT cls.oid
+rabbitmq-1             | 2026-10-12T09:23:55.993669397Z 2026-10-12 09:23:55.992530+00:00 [info] <0.542.0> Starting worker pool 'definition_import_pool' with 12 processes in it[0m
+rabbitmq-1             | 2026-10-12T09:23:55.993823775Z 2026-10-12 09:23:55.993237+00:00 [info] <0.209.0> Running boot step cluster_name defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:55.993852461Z 2026-10-12 09:23:55.993483+00:00 [info] <0.209.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-hMYKHiDC6J3uVkue_rGRqw'[0m
+order-api-1            | 2026-10-12T09:30:13.973844350Z                           FROM pg_class AS cls
+order-api-1            | 2026-10-12T09:30:13.973847857Z                                    JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+order-api-1            | 2026-10-12T09:30:13.973851524Z                           WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+order-api-1            | 2026-10-12T09:30:13.973855181Z                       ) AND
+rabbitmq-1             | 2026-10-12T09:23:56.064551017Z 2026-10-12 09:23:56.063973+00:00 [info] <0.209.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:56.064870530Z 2026-10-12 09:23:56.064380+00:00 [info] <0.209.0> Running boot step direct_client defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:56.064997878Z 2026-10-12 09:23:56.064600+00:00 [info] <0.209.0> Running boot step logger_exchange defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:56.072392398Z 2026-10-12 09:23:56.071960+00:00 [info] <0.209.0> Running boot step cluster_tags defined by app rabbit[0m
+order-api-1            | 2026-10-12T09:30:13.973859079Z                       objid=cls.oid AND
+order-api-1            | 2026-10-12T09:30:13.973862626Z                       deptype IN ('e', 'x')
+order-api-1            | 2026-10-12T09:30:13.973866162Z               )
+rabbitmq-1             | 2026-10-12T09:23:56.140487230Z 2026-10-12 09:23:56.139908+00:00 [info] <0.209.0> Running boot step queue_type_registrations defined by app rabbit[0m
+rabbitmq-1             | 2026-10-12T09:23:56.140520745Z 2026-10-12 09:23:56.140005+00:00 [info] <0.209.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+order-api-1            | 2026-10-12T09:30:13.988687498Z warn: Microsoft.AspNetCore.Hosting.Diagnostics[15]
+order-api-1            | 2026-10-12T09:30:13.988725251Z       Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:8080'.
+order-api-1            | 2026-10-12T09:30:14.010973602Z info: Microsoft.Hosting.Lifetime[14]
+order-api-1            | 2026-10-12T09:30:14.011001276Z       Now listening on: http://[::]:8080
+order-api-1            | 2026-10-12T09:30:14.011666130Z info: Microsoft.Hosting.Lifetime[0]
+rabbitmq-1             | 2026-10-12T09:23:56.140653846Z 2026-10-12 09:23:56.140264+00:00 [info] <0.906.0> Resetting node maintenance status[0m
+rabbitmq-1             | 2026-10-12T09:23:56.161888946Z [38;5;214m2026-10-12 09:23:56.161379+00:00 [warning] <0.923.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+rabbitmq-1             | 2026-10-12T09:23:56.161917681Z [38;5;214m2026-10-12 09:23:56.161379+00:00 [warning] <0.923.0> By default, this feature can still be used for now.[0m
+order-api-1            | 2026-10-12T09:30:14.011678053Z       Application started. Press Ctrl+C to shut down.
+rabbitmq-1             | 2026-10-12T09:23:56.161921879Z [38;5;214m2026-10-12 09:23:56.161379+00:00 [warning] <0.923.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+rabbitmq-1             | 2026-10-12T09:23:56.161925236Z [38;5;214m2026-10-12 09:23:56.161379+00:00 [warning] <0.923.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+rabbitmq-1             | 2026-10-12T09:23:56.161928332Z [38;5;214m2026-10-12 09:23:56.161379+00:00 [warning] <0.923.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+rabbitmq-1             | 2026-10-12T09:23:56.161931438Z [38;5;214m2026-10-12 09:23:56.161379+00:00 [warning] <0.923.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+order-api-1            | 2026-10-12T09:30:14.011682551Z info: Microsoft.Hosting.Lifetime[0]
+order-api-1            | 2026-10-12T09:30:14.011686369Z       Hosting environment: Development
+order-api-1            | 2026-10-12T09:30:14.011689976Z info: Microsoft.Hosting.Lifetime[0]
+rabbitmq-1             | 2026-10-12T09:23:56.161934564Z [38;5;214m2026-10-12 09:23:56.161379+00:00 [warning] <0.923.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+rabbitmq-1             | 2026-10-12T09:23:56.211362127Z 2026-10-12 09:23:56.210966+00:00 [info] <0.959.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+rabbitmq-1             | 2026-10-12T09:23:56.211484203Z 2026-10-12 09:23:56.211231+00:00 [info] <0.987.0> Statistics database started.[0m
+order-api-1            | 2026-10-12T09:30:14.011694474Z       Content root path: /app
+rabbitmq-1             | 2026-10-12T09:23:56.211494283Z 2026-10-12 09:23:56.211332+00:00 [info] <0.986.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+rabbitmq-1             | 2026-10-12T09:23:56.229915125Z 2026-10-12 09:23:56.229532+00:00 [info] <0.998.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+rabbitmq-1             | 2026-10-12T09:23:56.229941927Z 2026-10-12 09:23:56.229655+00:00 [info] <0.906.0> Ready to start client connection listeners[0m
+rabbitmq-1             | 2026-10-12T09:23:56.231630763Z 2026-10-12 09:23:56.231338+00:00 [info] <0.1042.0> started TCP listener on [::]:5672[0m
+rabbitmq-1             | 2026-10-12T09:23:56.361290897Z  completed with 4 plugins.
+rabbitmq-1             | 2026-10-12T09:23:56.361318219Z 2026-10-12 09:23:56.360908+00:00 [info] <0.906.0> Server startup complete; 4 plugins started.[0m
+rabbitmq-1             | 2026-10-12T09:23:56.361322708Z 2026-10-12 09:23:56.360908+00:00 [info] <0.906.0>  * rabbitmq_prometheus[0m
+rabbitmq-1             | 2026-10-12T09:23:56.361326075Z 2026-10-12 09:23:56.360908+00:00 [info] <0.906.0>  * rabbitmq_management[0m
+rabbitmq-1             | 2026-10-12T09:23:56.361340803Z 2026-10-12 09:23:56.360908+00:00 [info] <0.906.0>  * rabbitmq_management_agent[0m
+rabbitmq-1             | 2026-10-12T09:23:56.361344610Z 2026-10-12 09:23:56.360908+00:00 [info] <0.906.0>  * rabbitmq_web_dispatch[0m
+rabbitmq-1             | 2026-10-12T09:23:56.542726651Z 2026-10-12 09:23:56.542032+00:00 [info] <0.10.0> Time to start RabbitMQ: 24320 ms[0m
+rabbitmq-1             | 2026-10-12T09:24:37.637414957Z 2026-10-12 09:24:37.636848+00:00 [info] <0.1122.0> accepting AMQP connection 172.20.0.6:41906 -> 172.20.0.4:5672[0m
+rabbitmq-1             | 2026-10-12T09:24:37.652117930Z 2026-10-12 09:24:37.651587+00:00 [info] <0.1122.0> connection 172.20.0.6:41906 -> 172.20.0.4:5672 has a client-provided name: notification-service[0m
+rabbitmq-1             | 2026-10-12T09:24:37.652148791Z 2026-10-12 09:24:37.651790+00:00 [info] <0.1122.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:24:37.658202940Z 2026-10-12 09:24:37.657822+00:00 [info] <0.1122.0> connection 172.20.0.6:41906 -> 172.20.0.4:5672 - notification-service: user 'lab' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-12T09:25:38.551306689Z 2026-10-12 09:25:38.550875+00:00 [info] <0.1166.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.561428915Z 2026-10-12 09:25:38.561003+00:00 [info] <0.1168.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.580200482Z 2026-10-12 09:25:38.579759+00:00 [info] <0.1171.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.585682265Z 2026-10-12 09:25:38.585203+00:00 [info] <0.1173.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.594189275Z 2026-10-12 09:25:38.593693+00:00 [info] <0.1177.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.605026063Z 2026-10-12 09:25:38.604617+00:00 [info] <0.1179.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.629894823Z 2026-10-12 09:25:38.629408+00:00 [info] <0.1181.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.638322986Z 2026-10-12 09:25:38.637885+00:00 [info] <0.1185.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.641830828Z 2026-10-12 09:25:38.641302+00:00 [info] <0.1187.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.649279064Z 2026-10-12 09:25:38.648807+00:00 [info] <0.1189.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:38.653371568Z 2026-10-12 09:25:38.652939+00:00 [info] <0.1190.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:40.634327942Z 2026-10-12 09:25:40.633828+00:00 [info] <0.1196.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:40.643003583Z 2026-10-12 09:25:40.642524+00:00 [info] <0.1198.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:40.646913469Z 2026-10-12 09:25:40.646483+00:00 [info] <0.1199.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:43.354834069Z 2026-10-12 09:25:43.354286+00:00 [info] <0.1202.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:43.364843298Z 2026-10-12 09:25:43.364373+00:00 [info] <0.1204.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:43.368964753Z 2026-10-12 09:25:43.368375+00:00 [info] <0.1205.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:44.379866383Z 2026-10-12 09:25:44.379396+00:00 [info] <0.1206.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:44.383557100Z 2026-10-12 09:25:44.383114+00:00 [info] <0.1207.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:44.388236392Z 2026-10-12 09:25:44.387763+00:00 [info] <0.1209.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:44.392315691Z 2026-10-12 09:25:44.391866+00:00 [info] <0.1210.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:45.880107224Z 2026-10-12 09:25:45.879676+00:00 [info] <0.1211.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:45.890344303Z 2026-10-12 09:25:45.889876+00:00 [info] <0.1214.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:45.895275842Z 2026-10-12 09:25:45.894814+00:00 [info] <0.1216.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:45.898936016Z 2026-10-12 09:25:45.898505+00:00 [info] <0.1217.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:49.159332821Z 2026-10-12 09:25:49.158802+00:00 [info] <0.1220.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:49.169204893Z 2026-10-12 09:25:49.168753+00:00 [info] <0.1221.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:49.172995901Z 2026-10-12 09:25:49.172498+00:00 [info] <0.1222.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:49.176842584Z 2026-10-12 09:25:49.176316+00:00 [info] <0.1223.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:49.928121050Z 2026-10-12 09:25:49.927643+00:00 [info] <0.1224.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:49.935968680Z 2026-10-12 09:25:49.935469+00:00 [info] <0.1226.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:49.941951368Z 2026-10-12 09:25:49.941434+00:00 [info] <0.1228.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:49.945700795Z 2026-10-12 09:25:49.945220+00:00 [info] <0.1229.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:54.966472456Z 2026-10-12 09:25:54.965673+00:00 [info] <0.1233.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:54.971220254Z 2026-10-12 09:25:54.970696+00:00 [info] <0.1235.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:59.954163645Z 2026-10-12 09:25:59.953741+00:00 [info] <0.1245.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:25:59.957859437Z 2026-10-12 09:25:59.957445+00:00 [info] <0.1247.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:04.966438049Z 2026-10-12 09:26:04.965697+00:00 [info] <0.1250.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:04.970954973Z 2026-10-12 09:26:04.970670+00:00 [info] <0.1254.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:10.284092812Z 2026-10-12 09:26:10.283260+00:00 [info] <0.1257.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:10.415639191Z 2026-10-12 09:26:10.415099+00:00 [info] <0.1259.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:15.277406949Z 2026-10-12 09:26:15.276246+00:00 [info] <0.1263.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:15.281602483Z 2026-10-12 09:26:15.281014+00:00 [info] <0.1265.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:20.280572492Z 2026-10-12 09:26:20.279626+00:00 [info] <0.1269.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:20.284449269Z 2026-10-12 09:26:20.283890+00:00 [info] <0.1271.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:25.275500213Z 2026-10-12 09:26:25.274335+00:00 [info] <0.1275.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:25.279751762Z 2026-10-12 09:26:25.279079+00:00 [info] <0.1277.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:30.282269013Z 2026-10-12 09:26:30.281126+00:00 [info] <0.1283.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:30.286725048Z 2026-10-12 09:26:30.286060+00:00 [info] <0.1285.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:35.277604255Z 2026-10-12 09:26:35.276449+00:00 [info] <0.1289.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:35.281909489Z 2026-10-12 09:26:35.281329+00:00 [info] <0.1291.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:40.290841938Z 2026-10-12 09:26:40.289963+00:00 [info] <0.1296.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:40.294871213Z 2026-10-12 09:26:40.294361+00:00 [info] <0.1298.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:45.315934472Z 2026-10-12 09:26:45.315475+00:00 [info] <0.1303.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:45.320862478Z 2026-10-12 09:26:45.320289+00:00 [info] <0.1305.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:50.280007608Z 2026-10-12 09:26:50.279418+00:00 [info] <0.1307.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:50.284142022Z 2026-10-12 09:26:50.283559+00:00 [info] <0.1309.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:55.279043687Z 2026-10-12 09:26:55.278498+00:00 [info] <0.1313.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:26:55.283584529Z 2026-10-12 09:26:55.282998+00:00 [info] <0.1315.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:27:00.283490430Z 2026-10-12 09:27:00.282996+00:00 [info] <0.1321.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:27:00.287974937Z 2026-10-12 09:27:00.287474+00:00 [info] <0.1323.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:27:05.282333555Z 2026-10-12 09:27:05.281877+00:00 [info] <0.1328.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:27:05.286994816Z 2026-10-12 09:27:05.286444+00:00 [info] <0.1330.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:27:34.833449120Z 2026-10-12 09:27:34.832937+00:00 [info] <0.1346.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:27:34.837326214Z 2026-10-12 09:27:34.836862+00:00 [info] <0.1348.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:09.328692388Z 2026-10-12 09:28:09.327800+00:00 [info] <0.1371.0> accepting AMQP connection 172.20.0.5:41082 -> 172.20.0.4:5672[0m
+rabbitmq-1             | 2026-10-12T09:28:09.343685380Z 2026-10-12 09:28:09.343148+00:00 [info] <0.1371.0> connection 172.20.0.5:41082 -> 172.20.0.4:5672 has a client-provided name: order-service[0m
+rabbitmq-1             | 2026-10-12T09:28:09.343764663Z 2026-10-12 09:28:09.343327+00:00 [info] <0.1371.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:09.349993774Z 2026-10-12 09:28:09.349579+00:00 [info] <0.1371.0> connection 172.20.0.5:41082 -> 172.20.0.4:5672 - order-service: user 'lab' authenticated and granted access to vhost '/'[0m
+rabbitmq-1             | 2026-10-12T09:28:14.906089992Z 2026-10-12 09:28:14.905475+00:00 [info] <0.1387.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:14.933613147Z 2026-10-12 09:28:14.932925+00:00 [info] <0.1389.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:20.598000237Z 2026-10-12 09:28:20.597196+00:00 [info] <0.1424.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:21.369637902Z 2026-10-12 09:28:21.368994+00:00 [info] <0.1428.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:21.373651843Z 2026-10-12 09:28:21.373182+00:00 [info] <0.1430.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:21.488827725Z 2026-10-12 09:28:21.488047+00:00 [info] <0.1432.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:21.904008834Z 2026-10-12 09:28:21.903387+00:00 [info] <0.1436.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:22.143437345Z 2026-10-12 09:28:22.141231+00:00 [info] <0.1438.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:22.326263443Z 2026-10-12 09:28:22.325608+00:00 [info] <0.1440.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:22.679868086Z 2026-10-12 09:28:22.679129+00:00 [info] <0.1442.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:22.851867907Z 2026-10-12 09:28:22.851104+00:00 [info] <0.1445.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:22.911764616Z 2026-10-12 09:28:22.911231+00:00 [info] <0.1446.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:24.900467733Z 2026-10-12 09:28:24.899748+00:00 [info] <0.1447.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:24.910122714Z 2026-10-12 09:28:24.909472+00:00 [info] <0.1448.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:24.915923478Z 2026-10-12 09:28:24.915203+00:00 [info] <0.1450.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:24.919545508Z 2026-10-12 09:28:24.919078+00:00 [info] <0.1451.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:26.323227022Z 2026-10-12 09:28:26.322400+00:00 [info] <0.1454.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:26.331458959Z 2026-10-12 09:28:26.330766+00:00 [info] <0.1455.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:26.335576445Z 2026-10-12 09:28:26.335019+00:00 [info] <0.1456.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:31.352977871Z 2026-10-12 09:28:31.350794+00:00 [info] <0.1460.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:32.653397615Z 2026-10-12 09:28:32.652709+00:00 [info] <0.1463.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:32.707747470Z 2026-10-12 09:28:32.707273+00:00 [info] <0.1464.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:32.711810712Z 2026-10-12 09:28:32.711388+00:00 [info] <0.1465.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:34.004597191Z 2026-10-12 09:28:34.004082+00:00 [info] <0.1466.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:34.014936521Z 2026-10-12 09:28:34.014196+00:00 [info] <0.1470.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:34.018785987Z 2026-10-12 09:28:34.018321+00:00 [info] <0.1472.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:34.026922770Z 2026-10-12 09:28:34.026380+00:00 [info] <0.1474.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:34.031812691Z 2026-10-12 09:28:34.031319+00:00 [info] <0.1475.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:36.304154919Z 2026-10-12 09:28:36.303570+00:00 [info] <0.1477.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:36.313517481Z 2026-10-12 09:28:36.313000+00:00 [info] <0.1478.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:36.318401408Z 2026-10-12 09:28:36.317883+00:00 [info] <0.1480.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:36.322506622Z 2026-10-12 09:28:36.322036+00:00 [info] <0.1481.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:37.434470278Z 2026-10-12 09:28:37.433971+00:00 [info] <0.1482.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:37.444529301Z 2026-10-12 09:28:37.444027+00:00 [info] <0.1484.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:37.448811976Z 2026-10-12 09:28:37.448379+00:00 [info] <0.1486.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:37.452257644Z 2026-10-12 09:28:37.451820+00:00 [info] <0.1487.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:42.467792371Z 2026-10-12 09:28:42.466974+00:00 [info] <0.1491.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:42.472160458Z 2026-10-12 09:28:42.471727+00:00 [info] <0.1493.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:47.478605151Z 2026-10-12 09:28:47.478119+00:00 [info] <0.1498.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:47.482482025Z 2026-10-12 09:28:47.482072+00:00 [info] <0.1500.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:53.294550639Z 2026-10-12 09:28:53.293990+00:00 [info] <0.1505.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:53.299175778Z 2026-10-12 09:28:53.298660+00:00 [info] <0.1507.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:58.276028868Z 2026-10-12 09:28:58.275593+00:00 [info] <0.1511.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:28:58.279996721Z 2026-10-12 09:28:58.279557+00:00 [info] <0.1513.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:03.286678322Z 2026-10-12 09:29:03.286245+00:00 [info] <0.1518.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:03.290812806Z 2026-10-12 09:29:03.290369+00:00 [info] <0.1520.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:08.305306616Z 2026-10-12 09:29:08.304865+00:00 [info] <0.1525.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:08.309586054Z 2026-10-12 09:29:08.309056+00:00 [info] <0.1527.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:13.305031693Z 2026-10-12 09:29:13.304571+00:00 [info] <0.1531.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:13.308967989Z 2026-10-12 09:29:13.308579+00:00 [info] <0.1533.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:18.272246326Z 2026-10-12 09:29:18.271587+00:00 [info] <0.1537.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:18.276771921Z 2026-10-12 09:29:18.276194+00:00 [info] <0.1539.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:23.272889120Z 2026-10-12 09:29:23.272388+00:00 [info] <0.1541.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:23.277705775Z 2026-10-12 09:29:23.277269+00:00 [info] <0.1543.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:28.282934176Z 2026-10-12 09:29:28.282343+00:00 [info] <0.1547.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:28.287911651Z 2026-10-12 09:29:28.287366+00:00 [info] <0.1549.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:33.276277637Z 2026-10-12 09:29:33.275795+00:00 [info] <0.1554.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:33.280565652Z 2026-10-12 09:29:33.280043+00:00 [info] <0.1556.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:38.287970103Z 2026-10-12 09:29:38.287227+00:00 [info] <0.1561.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:38.292035058Z 2026-10-12 09:29:38.291580+00:00 [info] <0.1563.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:43.292224728Z 2026-10-12 09:29:43.291571+00:00 [info] <0.1567.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:43.296913149Z 2026-10-12 09:29:43.296408+00:00 [info] <0.1569.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:48.280423001Z 2026-10-12 09:29:48.279845+00:00 [info] <0.1573.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:29:48.284038265Z 2026-10-12 09:29:48.283635+00:00 [info] <0.1575.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:04.121196176Z 2026-10-12 09:30:04.120641+00:00 [info] <0.1588.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:04.436984665Z 2026-10-12 09:30:04.436539+00:00 [info] <0.1590.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:06.451483432Z [38;5;214m2026-10-12 09:30:06.450941+00:00 [warning] <0.1371.0> closing AMQP connection <0.1371.0> (172.20.0.5:41082 -> 172.20.0.4:5672 - order-service, vhost: '/', user: 'lab', duration: '1M, 57s'):[0m
+rabbitmq-1             | 2026-10-12T09:30:06.451513380Z [38;5;214m2026-10-12 09:30:06.450941+00:00 [warning] <0.1371.0> client unexpectedly closed TCP connection[0m
+rabbitmq-1             | 2026-10-12T09:30:07.458792829Z 2026-10-12 09:30:07.458415+00:00 [info] <0.1594.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:07.461694341Z 2026-10-12 09:30:07.461392+00:00 [info] <0.1596.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:13.289674156Z 2026-10-12 09:30:13.289008+00:00 [info] <0.1601.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:13.293531160Z 2026-10-12 09:30:13.293008+00:00 [info] <0.1603.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:18.279053789Z 2026-10-12 09:30:18.278357+00:00 [info] <0.1607.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:18.283398859Z 2026-10-12 09:30:18.282870+00:00 [info] <0.1609.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:23.280163704Z 2026-10-12 09:30:23.279428+00:00 [info] <0.1613.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:23.284520298Z 2026-10-12 09:30:23.284071+00:00 [info] <0.1615.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:28.273865113Z 2026-10-12 09:30:28.273388+00:00 [info] <0.1619.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:28.278038171Z 2026-10-12 09:30:28.277508+00:00 [info] <0.1621.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:33.286304980Z 2026-10-12 09:30:33.285802+00:00 [info] <0.1626.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:33.289873557Z 2026-10-12 09:30:33.289455+00:00 [info] <0.1628.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:38.285656481Z 2026-10-12 09:30:38.285187+00:00 [info] <0.1632.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:38.289980077Z 2026-10-12 09:30:38.289419+00:00 [info] <0.1634.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:42.466412855Z 2026-10-12 09:30:42.465988+00:00 [info] <0.1638.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:42.469743793Z 2026-10-12 09:30:42.469361+00:00 [info] <0.1640.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:44.429881623Z 2026-10-12 09:30:44.429386+00:00 [info] <0.1642.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:44.435459624Z 2026-10-12 09:30:44.435020+00:00 [info] <0.1643.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:44.439497458Z 2026-10-12 09:30:44.439052+00:00 [info] <0.1645.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:44.442441379Z 2026-10-12 09:30:44.442044+00:00 [info] <0.1646.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:45.295791584Z 2026-10-12 09:30:45.295215+00:00 [info] <0.1647.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:45.301152683Z 2026-10-12 09:30:45.300680+00:00 [info] <0.1649.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:45.305175572Z 2026-10-12 09:30:45.304761+00:00 [info] <0.1651.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:45.308361172Z 2026-10-12 09:30:45.307993+00:00 [info] <0.1652.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:50.318113128Z 2026-10-12 09:30:50.317491+00:00 [info] <0.1656.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:50.322975545Z 2026-10-12 09:30:50.322380+00:00 [info] <0.1658.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:54.901356180Z 2026-10-12 09:30:54.900808+00:00 [info] <0.1662.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:54.908070855Z 2026-10-12 09:30:54.907628+00:00 [info] <0.1663.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:54.912481640Z 2026-10-12 09:30:54.912067+00:00 [info] <0.1665.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:54.915533506Z 2026-10-12 09:30:54.915192+00:00 [info] <0.1666.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:58.105644233Z 2026-10-12 09:30:58.105008+00:00 [info] <0.1667.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:58.113085828Z 2026-10-12 09:30:58.112676+00:00 [info] <0.1671.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:58.115720419Z 2026-10-12 09:30:58.115372+00:00 [info] <0.1673.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:58.120151605Z 2026-10-12 09:30:58.119683+00:00 [info] <0.1675.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:30:58.122936054Z 2026-10-12 09:30:58.122609+00:00 [info] <0.1676.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:03.282151786Z 2026-10-12 09:31:03.281563+00:00 [info] <0.1681.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:03.289352346Z 2026-10-12 09:31:03.288860+00:00 [info] <0.1685.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:03.293427315Z 2026-10-12 09:31:03.292901+00:00 [info] <0.1687.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:08.281464053Z 2026-10-12 09:31:08.280986+00:00 [info] <0.1691.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:08.288874043Z 2026-10-12 09:31:08.288336+00:00 [info] <0.1695.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:08.292476649Z 2026-10-12 09:31:08.292053+00:00 [info] <0.1697.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:13.277864429Z 2026-10-12 09:31:13.277147+00:00 [info] <0.1701.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:13.285450452Z 2026-10-12 09:31:13.284895+00:00 [info] <0.1705.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:13.289228394Z 2026-10-12 09:31:13.288811+00:00 [info] <0.1707.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:18.289026762Z 2026-10-12 09:31:18.288358+00:00 [info] <0.1711.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:18.295864787Z 2026-10-12 09:31:18.295407+00:00 [info] <0.1715.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:18.299742298Z 2026-10-12 09:31:18.299326+00:00 [info] <0.1717.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:23.287431921Z 2026-10-12 09:31:23.287067+00:00 [info] <0.1721.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:23.295709504Z 2026-10-12 09:31:23.295142+00:00 [info] <0.1725.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:23.299954645Z 2026-10-12 09:31:23.299495+00:00 [info] <0.1727.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:28.282899234Z 2026-10-12 09:31:28.282469+00:00 [info] <0.1731.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:28.289517816Z 2026-10-12 09:31:28.289082+00:00 [info] <0.1735.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:28.292842162Z 2026-10-12 09:31:28.292455+00:00 [info] <0.1737.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:33.278986215Z 2026-10-12 09:31:33.278580+00:00 [info] <0.1740.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:33.286871486Z 2026-10-12 09:31:33.286417+00:00 [info] <0.1744.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:33.291390580Z 2026-10-12 09:31:33.290852+00:00 [info] <0.1746.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:38.281197551Z 2026-10-12 09:31:38.280587+00:00 [info] <0.1750.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:38.288097908Z 2026-10-12 09:31:38.287536+00:00 [info] <0.1754.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:38.291903505Z 2026-10-12 09:31:38.291493+00:00 [info] <0.1756.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:43.279150189Z 2026-10-12 09:31:43.278750+00:00 [info] <0.1760.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:43.286559764Z 2026-10-12 09:31:43.286040+00:00 [info] <0.1764.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:43.289966063Z 2026-10-12 09:31:43.289559+00:00 [info] <0.1766.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:48.284014010Z 2026-10-12 09:31:48.283550+00:00 [info] <0.1770.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:48.291156400Z 2026-10-12 09:31:48.290675+00:00 [info] <0.1774.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:48.295320339Z 2026-10-12 09:31:48.294753+00:00 [info] <0.1776.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:53.279951486Z 2026-10-12 09:31:53.279224+00:00 [info] <0.1780.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:53.286494611Z 2026-10-12 09:31:53.285907+00:00 [info] <0.1784.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:53.290193010Z 2026-10-12 09:31:53.289452+00:00 [info] <0.1786.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:58.281934502Z 2026-10-12 09:31:58.281266+00:00 [info] <0.1794.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:58.289236139Z 2026-10-12 09:31:58.288698+00:00 [info] <0.1798.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:31:58.293832195Z 2026-10-12 09:31:58.293113+00:00 [info] <0.1800.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:00.797367520Z 2026-10-12 09:32:00.796525+00:00 [info] <0.1802.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:00.803558656Z 2026-10-12 09:32:00.802839+00:00 [info] <0.1803.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:00.806573966Z 2026-10-12 09:32:00.806052+00:00 [info] <0.1804.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:01.217873374Z 2026-10-12 09:32:01.217167+00:00 [info] <0.1805.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:01.224984524Z 2026-10-12 09:32:01.224416+00:00 [info] <0.1806.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:01.228722701Z 2026-10-12 09:32:01.228130+00:00 [info] <0.1808.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:01.232004490Z 2026-10-12 09:32:01.231580+00:00 [info] <0.1809.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:01.660115395Z 2026-10-12 09:32:01.659710+00:00 [info] <0.1810.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:01.669427990Z 2026-10-12 09:32:01.668709+00:00 [info] <0.1812.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:01.673771908Z 2026-10-12 09:32:01.673267+00:00 [info] <0.1814.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:01.678276370Z 2026-10-12 09:32:01.677908+00:00 [info] <0.1815.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:06.688875973Z 2026-10-12 09:32:06.688231+00:00 [info] <0.1819.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:06.692929598Z 2026-10-12 09:32:06.692343+00:00 [info] <0.1821.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:12.284959157Z 2026-10-12 09:32:12.284048+00:00 [info] <0.1826.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:12.289335751Z 2026-10-12 09:32:12.288824+00:00 [info] <0.1828.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:17.279296963Z 2026-10-12 09:32:17.278461+00:00 [info] <0.1832.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:17.283130512Z 2026-10-12 09:32:17.282585+00:00 [info] <0.1834.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:22.281533871Z 2026-10-12 09:32:22.278958+00:00 [info] <0.1838.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:22.286497695Z 2026-10-12 09:32:22.285887+00:00 [info] <0.1840.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:27.273888789Z 2026-10-12 09:32:27.273341+00:00 [info] <0.1844.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:27.278558062Z 2026-10-12 09:32:27.278126+00:00 [info] <0.1846.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:32.290123894Z 2026-10-12 09:32:32.289659+00:00 [info] <0.1851.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:32.295084769Z 2026-10-12 09:32:32.294627+00:00 [info] <0.1853.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:37.279638624Z 2026-10-12 09:32:37.279107+00:00 [info] <0.1857.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:37.285281869Z 2026-10-12 09:32:37.284934+00:00 [info] <0.1859.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:41.992382753Z 2026-10-12 09:32:41.991853+00:00 [info] <0.1863.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:42.006520088Z 2026-10-12 09:32:42.006097+00:00 [info] <0.1865.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:43.870264247Z 2026-10-12 09:32:43.869796+00:00 [info] <0.1867.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:43.873608391Z 2026-10-12 09:32:43.873214+00:00 [info] <0.1869.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:43.876901831Z 2026-10-12 09:32:43.876580+00:00 [info] <0.1871.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:43.879566021Z 2026-10-12 09:32:43.879266+00:00 [info] <0.1872.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:44.266183286Z 2026-10-12 09:32:44.265762+00:00 [info] <0.1873.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:44.270057223Z 2026-10-12 09:32:44.269656+00:00 [info] <0.1875.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:44.273626362Z 2026-10-12 09:32:44.273235+00:00 [info] <0.1877.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:44.276357698Z 2026-10-12 09:32:44.276033+00:00 [info] <0.1878.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:45.270923652Z 2026-10-12 09:32:45.270307+00:00 [info] <0.1879.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:45.279267624Z 2026-10-12 09:32:45.278765+00:00 [info] <0.1880.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:45.283590031Z 2026-10-12 09:32:45.283147+00:00 [info] <0.1882.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:45.287230586Z 2026-10-12 09:32:45.286773+00:00 [info] <0.1883.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:45.814034846Z 2026-10-12 09:32:45.813526+00:00 [info] <0.1884.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:45.820732255Z 2026-10-12 09:32:45.820278+00:00 [info] <0.1886.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:45.824235065Z 2026-10-12 09:32:45.823865+00:00 [info] <0.1888.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:45.827396435Z 2026-10-12 09:32:45.826973+00:00 [info] <0.1889.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:48.970889557Z 2026-10-12 09:32:48.970395+00:00 [info] <0.1892.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:48.978255223Z 2026-10-12 09:32:48.977753+00:00 [info] <0.1893.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:48.983079423Z 2026-10-12 09:32:48.982610+00:00 [info] <0.1894.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:48.986198224Z 2026-10-12 09:32:48.985841+00:00 [info] <0.1895.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:54.006441149Z 2026-10-12 09:32:54.005847+00:00 [info] <0.1899.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:54.010558452Z 2026-10-12 09:32:54.010178+00:00 [info] <0.1900.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:56.530544900Z 2026-10-12 09:32:56.530045+00:00 [info] <0.1901.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:56.539801678Z 2026-10-12 09:32:56.539253+00:00 [info] <0.1902.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:56.544214579Z 2026-10-12 09:32:56.543725+00:00 [info] <0.1904.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:56.548049551Z 2026-10-12 09:32:56.547610+00:00 [info] <0.1905.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:57.820036160Z 2026-10-12 09:32:57.819455+00:00 [info] <0.1906.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:57.827097261Z 2026-10-12 09:32:57.826637+00:00 [info] <0.1908.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:57.830696876Z 2026-10-12 09:32:57.830314+00:00 [info] <0.1910.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:32:57.834166054Z 2026-10-12 09:32:57.833797+00:00 [info] <0.1911.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:02.855560421Z 2026-10-12 09:33:02.854807+00:00 [info] <0.1915.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:02.859694021Z 2026-10-12 09:33:02.859286+00:00 [info] <0.1917.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:07.855103245Z 2026-10-12 09:33:07.854656+00:00 [info] <0.1921.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:07.858675176Z 2026-10-12 09:33:07.858330+00:00 [info] <0.1923.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:12.848961236Z 2026-10-12 09:33:12.848060+00:00 [info] <0.1927.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:12.851754778Z 2026-10-12 09:33:12.851327+00:00 [info] <0.1929.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:17.847971148Z 2026-10-12 09:33:17.847109+00:00 [info] <0.1933.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:17.850477687Z 2026-10-12 09:33:17.850087+00:00 [info] <0.1935.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:22.845383332Z 2026-10-12 09:33:22.844839+00:00 [info] <0.1939.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:22.848414642Z 2026-10-12 09:33:22.848028+00:00 [info] <0.1941.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:27.852526953Z 2026-10-12 09:33:27.851767+00:00 [info] <0.1946.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:27.856177103Z 2026-10-12 09:33:27.855655+00:00 [info] <0.1948.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:32.854717636Z 2026-10-12 09:33:32.854130+00:00 [info] <0.1951.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:32.859435014Z 2026-10-12 09:33:32.858939+00:00 [info] <0.1953.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:37.843775677Z 2026-10-12 09:33:37.843330+00:00 [info] <0.1957.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:37.847311544Z 2026-10-12 09:33:37.846927+00:00 [info] <0.1959.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:42.855886267Z 2026-10-12 09:33:42.855394+00:00 [info] <0.1964.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:42.858844952Z 2026-10-12 09:33:42.858449+00:00 [info] <0.1966.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:48.288209098Z 2026-10-12 09:33:48.287672+00:00 [info] <0.1971.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:48.292213005Z 2026-10-12 09:33:48.291757+00:00 [info] <0.1973.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:53.279777710Z 2026-10-12 09:33:53.279246+00:00 [info] <0.1977.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:53.283987383Z 2026-10-12 09:33:53.283484+00:00 [info] <0.1979.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:58.272343781Z 2026-10-12 09:33:58.271843+00:00 [info] <0.1987.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:33:58.276872297Z 2026-10-12 09:33:58.276284+00:00 [info] <0.1989.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:03.276282612Z 2026-10-12 09:34:03.275723+00:00 [info] <0.1993.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:03.280692859Z 2026-10-12 09:34:03.280269+00:00 [info] <0.1995.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:08.281379801Z 2026-10-12 09:34:08.280945+00:00 [info] <0.1999.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:08.285613741Z 2026-10-12 09:34:08.285210+00:00 [info] <0.2001.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:13.279235677Z 2026-10-12 09:34:13.278855+00:00 [info] <0.2003.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:13.284053294Z 2026-10-12 09:34:13.283610+00:00 [info] <0.2005.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:18.273502452Z 2026-10-12 09:34:18.272878+00:00 [info] <0.2009.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:18.277541790Z 2026-10-12 09:34:18.277117+00:00 [info] <0.2011.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:23.275110602Z 2026-10-12 09:34:23.274710+00:00 [info] <0.2015.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:23.279129973Z 2026-10-12 09:34:23.278629+00:00 [info] <0.2017.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:28.287776969Z 2026-10-12 09:34:28.287337+00:00 [info] <0.2022.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:28.292009442Z 2026-10-12 09:34:28.291598+00:00 [info] <0.2024.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:33.284391970Z 2026-10-12 09:34:33.283980+00:00 [info] <0.2028.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:33.288226319Z 2026-10-12 09:34:33.287815+00:00 [info] <0.2030.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:38.285781538Z 2026-10-12 09:34:38.285330+00:00 [info] <0.2034.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:38.289999274Z 2026-10-12 09:34:38.289539+00:00 [info] <0.2036.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:43.275475338Z 2026-10-12 09:34:43.275020+00:00 [info] <0.2040.0> User 'lab' authenticated successfully[0m
+rabbitmq-1             | 2026-10-12T09:34:43.279146827Z 2026-10-12 09:34:43.278768+00:00 [info] <0.2042.0> User 'lab' authenticated successfully[0m
